@@ -14,21 +14,21 @@ public enum CardSuite {
     SPADE(4);
 
 
-    private final int suite;
+    private final int value;
 
     CardSuite(int rank) {
-        this.suite = rank;
+        this.value = rank;
     }
 
-    public int getSuite() {
-        return suite;
+    public int getValue() {
+        return value;
     }
 
     private static Map<Integer, CardSuite> indexMap = new HashMap<>();
 
     static {
         for (var suite : values()) {
-            indexMap.put(suite.getSuite(), suite);
+            indexMap.put(suite.getValue(), suite);
         }
     }
 

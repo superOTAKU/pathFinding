@@ -23,21 +23,21 @@ public enum CardNumber {
     ACE(14),
     JOKER(15)
     ;
-    private final int number;
+    private final int value;
 
-    CardNumber(int number) {
-        this.number = number;
+    CardNumber(int value) {
+        this.value = value;
     }
 
-    public int getNumber() {
-        return number;
+    public int value() {
+        return value;
     }
 
     private static final Map<Integer, CardNumber> indexMap = new HashMap<>();
 
     static {
         for (var cardNumber : values()) {
-            indexMap.put(cardNumber.getNumber(), cardNumber);
+            indexMap.put(cardNumber.value(), cardNumber);
         }
     }
 
